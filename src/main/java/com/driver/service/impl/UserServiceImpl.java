@@ -166,9 +166,9 @@ public class UserServiceImpl implements UserService {
         UserDto userDto = new UserDto();
         userDto.setFirstName(userDetails.getFirstName());
         userDto.setLastName(userDetails.getLastName());
-        userDetails.setEmail(userDetails.getEmail());
+        userDto.setEmail(userDetails.getEmail());
 
-        String userId = userRepository.findByEmail(userDetails.getEmail()).getUserId();
+        String userId = userRepository.findByUserId(id).getUserId();
 
         UserDto finalUserDto = updateUser(userId,userDto);
 

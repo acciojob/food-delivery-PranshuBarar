@@ -28,13 +28,15 @@ public class FoodServiceImpl implements FoodService{
     public FoodDto createFood(FoodDto food) {
         FoodEntity foodEntity = new FoodEntity();
         foodEntity.setFoodCategory(food.getFoodCategory());
-        foodEntity.setFoodId(food.getFoodId());
+        String str = usingRandomUUID();
+        foodEntity.setFoodId(str);
         foodEntity.setFoodPrice(food.getFoodPrice());
         foodEntity.setFoodName(food.getFoodName());
 
         foodRepository.save(foodEntity);
-
+        food.setFoodId(str);
         food.setId(foodRepository.findByFoodId(food.getFoodId()).getId());
+
         return food;
     }
 
