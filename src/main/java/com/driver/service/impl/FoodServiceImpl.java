@@ -16,6 +16,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class FoodServiceImpl implements FoodService{
@@ -169,6 +170,14 @@ public class FoodServiceImpl implements FoodService{
                     f.getFoodPrice(), f.getFoodCategory()));
         }
         return foodDetailsResponseList;
+    }
+
+    static String usingRandomUUID() {
+
+        UUID randomUUID = UUID.randomUUID();
+
+        return randomUUID.toString().replaceAll("_", "");
+
     }
 
 

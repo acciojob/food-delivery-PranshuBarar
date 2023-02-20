@@ -1,5 +1,5 @@
 package com.driver.service.impl;
-
+import java.util.UUID;
 import com.driver.io.repository.UserRepository;
 import com.driver.model.entity.UserEntity;
 import com.driver.model.request.UserDetailsRequestModel;
@@ -25,9 +25,12 @@ public class UserServiceImpl implements UserService {
     public UserDto createUser(UserDto user) throws Exception {
         UserEntity userEntity = new UserEntity();
 
+        String str = usingRandomUUID();
         userEntity.setEmail(user.getEmail());
         userEntity.setFirstName(user.getFirstName());
         userEntity.setLastName(user.getLastName());
+        userEntity.setUserId(str);
+
         userRepository.save(userEntity);
 
         user.setId(userRepository.findByEmail(user.getEmail()).getId());
@@ -117,6 +120,7 @@ public class UserServiceImpl implements UserService {
         userDto.setLastName(userDetails.getLastName());
         userDto.setEmail(userDetails.getEmail());
 
+
         //---------------------------------
         UserDto finalUserDto = createUser(userDto);
 
@@ -198,6 +202,14 @@ public class UserServiceImpl implements UserService {
                     u.getEmail(), u.getFirstName(), u.getLastName()));
         }
         return userResponseList;
+    }
+
+    static String usingRandomUUID() {
+
+        UUID randomUUID = UUID.randomUUID();
+
+        return randomUUID.toString().replaceAll("_", "");
+
     }
 
 
