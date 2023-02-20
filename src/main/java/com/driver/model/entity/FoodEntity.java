@@ -24,7 +24,7 @@ public class FoodEntity{
 
 	@ManyToOne
 	@JoinColumn
-	UserEntity userEntity;
+	OrderEntity orderEntity;
 
 	public long getId() {
 		return id;
