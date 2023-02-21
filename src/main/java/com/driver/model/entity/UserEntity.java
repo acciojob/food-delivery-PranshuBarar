@@ -1,12 +1,11 @@
 package com.driver.model.entity;
 
-import java.io.Serializable;
 import java.util.List;
 
 import javax.persistence.*;
 
 @Entity(name = "users")
-public class UserEntity{
+public class UserEntity {
 
 	@Id
 	@GeneratedValue

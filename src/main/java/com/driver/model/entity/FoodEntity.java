@@ -1,11 +1,9 @@
 package com.driver.model.entity;
 
-import java.io.Serializable;
-
 import javax.persistence.*;
 
 @Entity(name = "foods")
-public class FoodEntity{
+public class FoodEntity {
 	@Id
 	@GeneratedValue
 	private long id;

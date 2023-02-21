@@ -2,7 +2,6 @@ package com.driver.service.impl;
 
 import com.driver.io.repository.OrderRepository;
 import com.driver.model.entity.OrderEntity;
-import com.driver.model.entity.UserEntity;
 import com.driver.model.request.OrderDetailsRequestModel;
 import com.driver.model.response.OperationStatusModel;
 import com.driver.model.response.OrderDetailsResponse;
@@ -10,7 +9,6 @@ import com.driver.model.response.RequestOperationName;
 import com.driver.model.response.RequestOperationStatus;
 import com.driver.service.OrderService;
 import com.driver.shared.dto.OrderDto;
-import com.driver.shared.dto.UserDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

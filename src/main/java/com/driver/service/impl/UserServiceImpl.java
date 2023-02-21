@@ -9,7 +9,6 @@ import com.driver.model.response.RequestOperationStatus;
 import com.driver.model.response.UserResponse;
 import com.driver.service.UserService;
 import com.driver.shared.dto.UserDto;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
