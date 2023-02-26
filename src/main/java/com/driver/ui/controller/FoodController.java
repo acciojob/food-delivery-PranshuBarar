@@ -2,10 +2,9 @@ package com.driver.ui.controller;
 
 import java.util.List;
 
-import com.driver.model.request.FoodDetailsRequestModel;
+import com.driver.service.request.FoodDetailsRequestModel;
 import com.driver.model.response.FoodDetailsResponse;
 import com.driver.model.response.OperationStatusModel;
-import com.driver.service.FoodService;
 import com.driver.service.impl.FoodServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;

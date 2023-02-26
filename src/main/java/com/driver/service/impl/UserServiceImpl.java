@@ -2,7 +2,7 @@ package com.driver.service.impl;
 import java.util.UUID;
 import com.driver.io.repository.UserRepository;
 import com.driver.model.entity.UserEntity;
-import com.driver.model.request.UserDetailsRequestModel;
+import com.driver.service.request.UserDetailsRequestModel;
 import com.driver.model.response.OperationStatusModel;
 import com.driver.model.response.RequestOperationName;
 import com.driver.model.response.RequestOperationStatus;
@@ -105,6 +105,7 @@ public class UserServiceImpl implements UserService {
         }
         return userDtoList;
     }
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     //===============================================
     //CONVERTOR (Here below we are having some functions which will do conversions)
@@ -127,6 +128,7 @@ public class UserServiceImpl implements UserService {
         /*Now we will convert this finalUserDto into userResponse and return it*/
 
         UserResponse userResponse = new UserResponse();
+
         userResponse.setUserId(finalUserDto.getUserId());
         userResponse.setEmail(finalUserDto.getEmail());
         userResponse.setFirstName(finalUserDto.getFirstName());

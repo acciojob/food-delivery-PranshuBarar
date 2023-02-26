@@ -2,7 +2,7 @@ package com.driver.ui.controller;
 
 import java.util.List;
 
-import com.driver.model.request.OrderDetailsRequestModel;
+import com.driver.service.request.OrderDetailsRequestModel;
 import com.driver.model.response.OperationStatusModel;
 import com.driver.model.response.OrderDetailsResponse;
 import com.driver.service.impl.OrderServiceImpl;
